@@ -2,6 +2,12 @@ package iterations
 
 import "testing"
 
+func BenchmarkRepeat(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		repeat("a", 5)
+	}
+}
+
 func TestHello(t *testing.T) {
 	assertCorrectMessage := func(got string, want string) {
 		t.Helper()
