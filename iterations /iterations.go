@@ -5,12 +5,12 @@ import (
 )
 
 func main() {
-	fmt.Println(repeat("a"))
+	fmt.Println(repeat("a", 4))
 }
 
-func repeat(char string) string {
+func repeat(char string, numberToRepeat int) string {
 	var repeatString string
-	for i :=0; i<5; i++ {
+	for i :=0; i<numberToRepeat; i++ {
 		repeatString += char
 	}
 	return repeatString
